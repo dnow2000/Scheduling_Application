@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.MainPage">
+  <tabs>
+      <Tab onSelectionChanged="#onAppointmentTab" text="Appointments">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="967.0">
+                  <children>
+                      <TableView fx:id="appointmentsTable" layoutX="55.0" layoutY="50.0" prefHeight="257.0" prefWidth="880.0">
+                          <columns>
+                              <TableColumn fx:id="appointmentIDCol" prefWidth="100.9999885559082" text="Appointment_ID" />
+                              <TableColumn fx:id="titleCol" prefWidth="50.333343505859375" text="Title" />
+                              <TableColumn fx:id="descriptionCol" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="contactCol" prefWidth="101.66665649414062" text="Contact" />
+                              <TableColumn fx:id="typeCol" prefWidth="73.66665649414062" text="Type" />
+                              <TableColumn fx:id="startDateTimeCol" prefWidth="127.33331298828125" text="Start Date/Time" />
+                              <TableColumn fx:id="endDateTimeCol" prefWidth="116.33331298828125" text="End Date/Time" />
+                              <TableColumn fx:id="customerIdCol" prefWidth="82.0" text="Customer ID" />
+                        <TableColumn fx:id="userIdCol" prefWidth="82.0" text="User ID" />
+                          </columns>
+                      </TableView>
+                      <Button fx:id="addAppointmentButton" layoutX="166.0" layoutY="336.0" mnemonicParsing="false" onAction="#onAddAppointment" prefHeight="33.0" prefWidth="111.0" text="Add Appointment" />
+                      <Button fx:id="updateAppointmentButton" layoutX="295.0" layoutY="336.0" mnemonicParsing="false" onAction="#onUpdateAppointment" prefHeight="33.0" prefWidth="129.0" text="Update Appointment" />
+                      <Button fx:id="deleteAppointmentButton" layoutX="442.0" layoutY="336.0" mnemonicParsing="false" onAction="#onDeleteAppointment" prefHeight="33.0" prefWidth="129.0" text="Delete Appointment" />
+                      <Label layoutX="55.0" layoutY="27.0" text="Filter By:" />
+                      <RadioButton fx:id="monthFilter" layoutX="125.0" layoutY="24.0" mnemonicParsing="false" onAction="#onMonthFilter" text="This Month" />
+                      <RadioButton fx:id="weekFilter" layoutX="219.0" layoutY="24.0" mnemonicParsing="false" onAction="#onWeekFilter" text="This Week" />
+                      <ComboBox fx:id="typeComboBox" layoutX="458.0" layoutY="20.0" onAction="#onChooseType" prefHeight="25.0" prefWidth="73.0" />
+                      <Label layoutX="557.0" layoutY="24.0" text="Month:" />
+                      <ComboBox fx:id="monthComboBox" layoutX="596.0" layoutY="20.0" onAction="#onChooseMonth" prefHeight="25.0" prefWidth="73.0" />
+                      <Button fx:id="clearButton" layoutX="854.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClear" text="Clear" />
+                  <Label layoutX="429.0" layoutY="24.0" text="type:" />
+                  </children></AnchorPane>
+          </content>
+      </Tab>
+      <Tab onSelectionChanged="#onCustomersTab" text="Customers">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="customerTable" layoutX="76.0" layoutY="73.0" prefHeight="257.0" prefWidth="736.0">
+                     <columns>
+                        <TableColumn fx:id="customerIDCol" prefWidth="49.0" text="ID" />
+                        <TableColumn fx:id="nameCol" prefWidth="102.33332824707031" text="Customer Name" />
+                        <TableColumn fx:id="addressCol" prefWidth="111.66667175292969" text="Address" />
+                        <TableColumn fx:id="postalCodeCol" prefWidth="94.00003051757812" text="Postal Code" />
+                        <TableColumn fx:id="phoneCol" prefWidth="89.66671752929688" text="Phone" />
+                        <TableColumn fx:id="countryCol" prefWidth="77.66668701171875" text="Country" />
+                        <TableColumn fx:id="stateProvidenceCol" prefWidth="128.33331298828125" text="State/Province" />
+                        <TableColumn fx:id="divisionID" prefWidth="86.33331298828125" text="Division ID" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="addCustomerButton" layoutX="232.0" layoutY="340.0" mnemonicParsing="false" onAction="#onAddCustomer" prefHeight="37.0" prefWidth="93.0" text="Add Customer" />
+                  <Button fx:id="deleteCustomerButton" layoutX="466.0" layoutY="340.0" mnemonicParsing="false" onAction="#onDeleteCustomer" prefHeight="37.0" prefWidth="108.0" text="Delete Customer" />
+                  <Button fx:id="updateCustomerButton" layoutX="339.0" layoutY="340.0" mnemonicParsing="false" onAction="#onUpdateCustomer" prefHeight="37.0" prefWidth="112.0" text="Update Customer" />
+                  <ComboBox fx:id="countryComboBox" layoutX="204.0" layoutY="32.0" onAction="#onChooseCountry" prefHeight="25.0" prefWidth="90.0" />
+                  <Label layoutX="76.0" layoutY="36.0" text="Filter By:" />
+                  <Label layoutX="158.0" layoutY="36.0" text="Country:" />
+                  <ComboBox fx:id="divisionComboBox" layoutX="395.0" layoutY="32.0" onAction="#onChooseDivision" prefHeight="25.0" prefWidth="73.0" />
+                  <Label layoutX="315.0" layoutY="36.0" text="Province/State:" />
+                  <Button layoutX="597.0" layoutY="340.0" mnemonicParsing="false" onAction="#onViewCustomerAppointments" prefHeight="38.0" prefWidth="175.0" text="View Customer Appointments" />
+                  <TextField fx:id="customerNameField" layoutX="631.0" layoutY="32.0" onKeyReleased="#onSearchCustomerName" />
+                  <Label layoutX="537.0" layoutY="36.0" text="Customer Name:" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab onSelectionChanged="#onContactTab" text="Contacts">
+        <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="399.0" prefWidth="770.0">
+                    <children>
+                        <TableView fx:id="contentTable" layoutX="208.0" layoutY="57.0" prefHeight="225.0" prefWidth="392.0">
+                            <columns>
+                                <TableColumn fx:id="contactIdCol" prefWidth="71.66665649414062" text="Contact_ID" />
+                                <TableColumn fx:id="contactNameCol" prefWidth="165.66668701171875" text="Name" />
+                                <TableColumn fx:id="contactEmailCol" prefWidth="151.6666259765625" text="Email" />
+                            </columns>
+                        </TableView>
+                  <Button layoutX="313.0" layoutY="305.0" mnemonicParsing="false" onAction="#onViewContactSchedule" prefHeight="40.0" prefWidth="146.0" text="view contact schedule" />
+                  <Label layoutX="201.0" layoutY="39.0" text="Contacts" />
+                    </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

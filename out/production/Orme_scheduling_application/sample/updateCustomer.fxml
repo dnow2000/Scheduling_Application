@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.UpdateCustomer">
+   <children>
+      <Label layoutX="65.0" layoutY="44.0" text="Update Customer">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="183.0" layoutY="116.0" text="ID:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="IdField" disable="true" layoutX="205.0" layoutY="113.0" />
+      <Label layoutX="102.0" layoutY="146.0" text="Customer Name:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NameField" layoutX="205.0" layoutY="143.0" />
+      <TextField fx:id="addressField" layoutX="205.0" layoutY="174.0" />
+      <TextField fx:id="postalCodeField" layoutX="205.0" layoutY="208.0" />
+      <TextField fx:id="phoneNumberField" layoutX="205.0" layoutY="240.0" />
+      <Label layoutX="150.0" layoutY="177.0" text="Address:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="211.0" text="Postal Code:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="243.0" text="Phone Number:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="divisionComboBox" layoutX="480.0" layoutY="174.0" prefWidth="150.0" />
+      <Label layoutX="387.0" layoutY="177.0" text="Province/State:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="430.0" layoutY="125.0" text="Country:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="countryComboBox" layoutX="480.0" layoutY="122.0" onAction="#onChooseCountry" prefWidth="150.0" />
+      <Button layoutX="418.0" layoutY="298.0" mnemonicParsing="false" onAction="#onUpdateCustomer" text="Update Customer" />
+      <Button fx:id="cancelButton" layoutX="544.0" layoutY="298.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+   </children>
+</AnchorPane>

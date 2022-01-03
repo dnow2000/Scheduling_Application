@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.AddAppointment">
+   <children>
+      <Label layoutX="55.0" layoutY="43.0" text="Add Appointment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="108.0" text="Appointment_ID:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="144.0" text="Title:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="appointmentIdField" disable="true" layoutX="160.0" layoutY="105.0" promptText="auto gen ID" />
+      <TextField fx:id="titleField" layoutX="160.0" layoutY="141.0" />
+      <TextField fx:id="descriptionField" layoutX="160.0" layoutY="174.0" />
+      <TextField fx:id="locationField" layoutX="160.0" layoutY="209.0" />
+      <TextField fx:id="typeField" layoutX="160.0" layoutY="280.0" />
+      <TextField fx:id="userIdField" disable="true" layoutX="436.0" layoutY="187.0" promptText="auto gen ID" />
+      <Label layoutX="83.0" layoutY="177.0" text="Description:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="212.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="212.0" text="Location:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="246.0" text="Contact:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="283.0" text="Type:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="343.0" layoutY="108.0" text="End Date/Time:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="315.0" text="Start Date/Time:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="144.0" text="Customer:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="addAppointmentButton" layoutX="375.0" layoutY="233.0" mnemonicParsing="false" onAction="#onAddAppointment" text="Add Appointment" />
+      <Button fx:id="cancelButton" layoutX="499.0" layoutY="233.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <DatePicker fx:id="startTimeDate" layoutX="160.0" layoutY="312.0" prefHeight="25.0" prefWidth="97.0" />
+      <DatePicker fx:id="endTimeDate" layoutX="432.0" layoutY="105.0" prefHeight="25.0" prefWidth="97.0" />
+      <Label layoutX="262.0" layoutY="315.0" text="Time:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="108.0" text="Time:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerIdField" layoutX="435.0" layoutY="141.0" onAction="#onSelectCustomer" prefWidth="150.0" />
+      <TextField fx:id="startTimeField" layoutX="295.0" layoutY="312.0" prefHeight="25.0" prefWidth="88.0" promptText="ex. 13:00" />
+      <TextField fx:id="endTimeField" layoutX="565.0" layoutY="105.0" prefHeight="25.0" prefWidth="88.0" promptText="ex. 13:00" />
+      <Label fx:id="businessHoursLabel" layoutX="220.0" layoutY="48.0" text="(Business Hours: 8:00 am - 20:00 pm)">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="contactComboBox" layoutX="159.0" layoutY="243.0" prefWidth="150.0" />
+      <Label layoutX="383.0" layoutY="189.0" text="User_ID:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ContactSchedule">
+   <children>
+      <Label fx:id="contactLabel" layoutX="47.0" layoutY="81.0" text="[CONTACT'S] SCHEDULE" />
+      <TableView fx:id="contactSchedTable" layoutX="27.0" layoutY="111.0" prefHeight="200.0" prefWidth="780.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" prefWidth="106.33333778381348" text="Appointment_ID" />
+          <TableColumn fx:id="titleCol" prefWidth="44.33331298828125" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="77.66667175292969" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="77.66667175292969" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="77.66667175292969" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="78.3333740234375" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="101.66665649414062" text="Start Date/Time" />
+            <TableColumn fx:id="endCol" prefWidth="103.0" text="End Date/Time" />
+            <TableColumn fx:id="customerIdCol" prefWidth="110.3333740234375" text="Customer_ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="27.0" layoutY="33.0" mnemonicParsing="false" onAction="#goBack" text="&lt; Go Back" />
+   </children>
+</AnchorPane>

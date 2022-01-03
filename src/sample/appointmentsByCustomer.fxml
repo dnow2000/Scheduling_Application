@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.AppointmentsByCustomer">
+
+    <TableView fx:id="appointmentsTable" layoutX="54.0" layoutY="87.0" prefHeight="257.0" prefWidth="805.0">
+        <columns>
+            <TableColumn fx:id="appointmentIDCol" prefWidth="100.9999885559082" text="Appointment_ID" />
+            <TableColumn fx:id="titleCol" prefWidth="50.333343505859375" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="101.66665649414062" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="73.66665649414062" text="Type" />
+            <TableColumn fx:id="startDateTimeCol" prefWidth="127.33331298828125" text="Start Date/Time" />
+            <TableColumn fx:id="endDateTimeCol" prefWidth="116.33331298828125" text="End Date/Time" />
+            <TableColumn fx:id="customerIdCol" prefWidth="82.0" text="Customer ID" />
+        </columns>
+    </TableView>
+
+   <Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onAction="#onGoBack" text="Go Back" />
+   <Label layoutX="54.0" layoutY="63.0" text="Customer Appointments" />
+   <Label layoutX="202.0" layoutY="63.0" text="filter By: " />
+   <ComboBox fx:id="typeComboBox" layoutX="307.0" layoutY="59.0" onAction="#onChooseType" prefWidth="150.0" />
+   <ComboBox fx:id="monthComboBox" layoutX="546.0" layoutY="59.0" onAction="#onChooseMonth" prefWidth="150.0" />
+   <Label layoutX="273.0" layoutY="63.0" text="Type:" />
+   <Label layoutX="504.0" layoutY="63.0" text="Month: " />
+   <Label fx:id="countLabel" layoutX="733.0" layoutY="63.0" text="(Total: 0)" />
+
+</AnchorPane>
